@@ -67,8 +67,22 @@ header nav ul {
     transition: all .3s linear;
 }
 
+header nav ul li {
+    position: relative;
+}
+
 header nav ul li a {
     text-decoration: none;
+    color: #3a3a3a;
+}
+
+header nav ul li.active::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    height: 2px;
+    background-color: red;
 }
 
 header nav button,
