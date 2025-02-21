@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Ga+Maamli&family=Italianno&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.logo {
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: "Italianno", cursive;
+    color: #111;
+}
+
+.heading,
+.sub-heading {
+    font-size: 100px;
+    letter-spacing: .3rem;
+    font-weight: bold;
+    color: #111;
+    font-family: "Anton";
+    line-height: 100px;
+}
+
+.sub-heading {
+    font-size: 90px;
+}
+
+body {
+    background-color: #f4efd9;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: #f4efd9
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+header nav ul {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    list-style: none;
+    transition: all .3s linear;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav button,
+.hero-content button,
+#gallery button,
+#Intouch button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+body.active nav ul {
+    position: fixed;
+    top: 10%;
+    left: 0;
+    height: calc(100vh - 50px);
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    background-color: #111;
+}
+
+body.active nav ul li{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+body.active nav ul li a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#hero {
+    position: relative;
+}
+
+.hero-content h1 {
+    text-align: center;
+}
+
+.hero-content p {
+    text-transform: lowercase;
+    margin-top: 1rem;
+}
+
+.hero-content button {
+    display: block;
+    margin-top: 1rem;
+}
+
+#hero .imgContainer {
+    margin-top: 1rem;
+    width: 100%;
+    height: 80vh;
+} 
+
+#hero .imgContainer img,
+#Intouch .imgContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#Intouch button {
+    display: block;
+}
+
+
+main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 80px;
+}
+
+#services .imgBlockCont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
+    gap: 1rem;
+}
+
+#services .imgBlockCont .imgBlock {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+
+#services .imgBlockCont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#services .imgBlockCont .imgBlock .info{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.gallery-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+}
+
+#gallery button {
+    display: block;
+}
+
+.gallery-cont img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    filter: grayscale(1);
+}
+
+
+.price-info > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.price-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    place-items: center;
+}
+
+.price-list > div:nth-child(even){
+    background-color: #111;
+    color: #f4efd9;
+}
+
+.price-block {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.price-block h1 {
+    font-size: 50px;
+    word-spacing: .3rem;
+}
+
+.price-block > p:nth-child(2) {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "Italianno";
+}
+
+.price-block > p:nth-child(3) {
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+}
+
+.price-block button {
+    background-color: #111;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: #f4efd9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 1rem;
+}
+#msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.msg-card {
+    height: 100px;
+    width: 100%;
+    background: no-repeat url("/images/pic3.jpg") center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#msg form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+#msg .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+#msg .form-group input,
+#msg .form-group textarea {
+    width: 100%;
+    height: 40px;
+    padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+#msg .form-group textarea{
+    height: 200px;
+}
+
+
+#msg form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+footer {
+    background: linear-gradient(165deg, #111, #3a3a3a);
+    padding: 50px 0;
+}
+
+footer .logo {
+    font-family: "Ga Maamli";
+    font-size: 80px;
+    text-align: center;
+    color: #fff;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+@media(min-width: 768px){
+    .heading {
+        line-height: initial;
+    }
+    .menu {
+        display: none;
+    }
+
+    header nav ul {
+        display: flex;
+    }
+
+    header nav button {
+        display: block;
+    }
+    #Intouch{
+        display: flex;
+        gap: 1rem;
+        height: 50vh;
+    }
+    #Intouch .imgContainer {
+        flex: 1;
+    }
+    #Intouch .info{
+        flex: 1;
+    }
+    #services .imgBlockCont{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #msg form {
+        width: 70%;
+    }
+    footer .logo {
+        font-size: 100px;
+    }
+}
+
+@media(min-width: 1024px){
+    #services .imgBlockCont{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
