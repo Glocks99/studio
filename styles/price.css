@@ -1,6 +1,0 @@
-@media(min-width: 768px) {
-    #accordion {
-        display: flex;
-        gap: 1rem;
-    }
-}

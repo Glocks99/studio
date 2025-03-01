@@ -10,296 +10,327 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="styles/shared/general.css" />
+    <link rel="stylesheet" href="/general.css" />
     <title>studio</title>
   </head>
   <body>
     <header>
-      <div class="logo">KR8TOS</div>
+      <div class="logo"><img src="/images/logo.png" alt="" /></div>
 
-      <nav>
-        <ul>
-          <li class="active">
-            <a href="index.html"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="gallery.html">
-              <i class="fa-solid fa-image"></i> Gallery</a
-            >
-          </li>
-          <li>
-            <a href="about.html"><i class="fas fa-question"></i> About</a>
-          </li>
-          <li>
-            <a href="pricing.html"><i class="fa-solid fa-coins"></i> Price</a>
-          </li>
-          <li>
-            <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
-          </li>
-        </ul>
-
-        <div class="menu close">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <button>GET IN TOUCH</button>
-      </nav>
+      <div class="menu close">
+        <i class="fas fa-bars"></i>
+      </div>
     </header>
 
+    <!-- hero section -->
     <main>
-      <section id="hero">
-        <div class="hero-content">
-          <h1 class="heading">KR8TOS STUDIOS</h1>
-          <p>
-            WELCOME TO KR8TOS STUDIO! WE ARE A DEDICATED PHOTOGRAPHY STUDIO
-            COMMITED TO CAPTURING BEAUTIFUL MOMENTS IN YOUR LIFE WITH SINCERITY
-            AND AUTHENTICITY. AT KR8TOS STUDIO, WE BELIEVE THAT EVERY MOMENT IS
-            SPECIAL AND DESERVES TO BE CAPTURED IN A WAY THAT REFLECTS THE TRUE
-            ESSENCE OF THE MOMENT. WE SPECIALIZE IN WEDDING PHOTOGRAPHY,
-            PORTRAITURE, AND EVENT PHOTOGRAPHY. WE ARE PASSIONATE ABOUT CREATING
-            BEAUTIFUL IMAGES
-          </p>
-          <button>GET IN TOUCH <i class="fas fa-arrow-right"></i></button>
+      <section id="hero" class="hero">
+        <div class="img-container">
+          <img src="/images/stud.jpg" alt="" />
         </div>
-        <div class="imgContainer">
-          <img src="images/herobg.jpg" alt="" />
+
+        <div class="hero-info">
+          <img src="/images/KWAMS WEDDINGS 2.png" alt="" />
+          <h1>Your Story, Our Lens</h1>
+          <p>
+            From portraits to events, we turn moments into timeless visuals.
+          </p>
+          <button>Explore more <i class="fas fa-arrow-right"></i></button>
         </div>
       </section>
 
-      <section id="Intouch">
-        <div class="imgContainer">
-          <img src="images/herobg.jpg" alt="" />
-        </div>
-        <div class="info">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-            veritatis quia nobis, odit soluta quasi delectus adipisci nostrum
-            deserunt beatae magni excepturi asperiores nisi quas atque nesciunt.
-            Nemo, delectus dolore!
-          </p>
+      <section id="abt">
+        <div class="abt">
+          <marquee behavior="" direction=""
+            >🎯 Our Specialties: ✔️ Portrait Photography, ✔️ Event Coverage
+            (Weddings, Birthdays, Corporate), ✔️ Product & Brand Photography, ✔️
+            Real Estate Photography, ✔️ Creative & Conceptual Shoots - Let’s
+            create something beautiful together—because every moment deserves to
+            be remembered.</marquee
+          >
 
-          <button>GET IN TOUCH <i class="fas fa-arrow-right"></i></button>
+          <div class="abt-content">
+            <div class="abt-image">
+              <img src="/images/herobg.jpg" alt="" />
+            </div>
+
+            <div class="abt-info">
+              <p class="headline">More Than Just a Lens, We Capture Stories</p>
+              <p>
+                At Kwamz Images, photography is more than just taking
+                pictures—it's about telling stories, preserving memories, and
+                creating art that lasts a lifetime. With a passion for capturing
+                authentic moments, we specialize in professional photography
+                services that cater to individuals, families, and businesses
+                looking for high-quality imagery.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section id="services">
-        <div class="">
-          <h1 class="sub-heading">OUR SERVICES</h1>
+      <section id="prices">
+        <h1 class="headline">Affordable Packages for Every Occasion</h1>
+        <p>
+          We offer a range of photography packages designed to meet the needs of
+          different clients. Whether you're looking for a quick personal shoot
+          or full-day event coverage, we have a package tailored for you.
+        </p>
+
+        <p class="msg">
+          For custom shoots, event coverage, and brand collaborations, contact
+          us for a tailored quote. We’ll work with you to create a package that
+          fits your vision and budget.
+        </p>
+
+        <div class="pricing">
+          <div class="basic">
+            <div class="">
+              <img src="/images/gifs/basic.gif" alt="" />
+            </div>
+
+            <div class="packages">
+              <h1>📌 Basic Package - $150</h1>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>1-Hour Photoshoot</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>10 Edited Images</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>Online Gallery Access</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>3-Day Delivery</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="standard">
+            <div class="">
+              <img src="/images/gifs/standard.gif" alt="" />
+            </div>
+
+            <div class="packages">
+              <h1>📌 Standard Package - $300</h1>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>2-Hour Photoshoot</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>25 Edited Images</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>1 Outfit Change</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>Print-Ready Images</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="premium">
+            <div class="">
+              <img src="/images/gifs/premium.gif" alt="" />
+            </div>
+
+            <div class="packages">
+              <h1>📌 Premium Package - $500</h1>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>Full-Day Photoshoot</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>50+ Edited Images</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>Multiple Locations</p>
+              </div>
+              <div class="">
+                <i class="fas fa-check-circle"></i>
+                <p>Personalized Photo Album</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comments">
+        <div class="cmt">
+          <h1 class="headline">
+            AN ARTFUL APPROACH for YOUR MOST CHERISHED MOMENTS
+          </h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-            reiciendis sint, sequi totam nobis similique adipisci accusantium
+            Through a blend of digital and film mediums, I create imagery that
+            is romantic, soulful, and emotionally resonant.
           </p>
         </div>
 
-        <div class="imgBlockCont">
-          <div class="imgBlock">
-            <img src="images/herobg.jpg" alt="" />
-            <div class="info">
-              <h1>FAMILY PORTRAITS</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Debitis accusamus possimus ad ipsa saepe incidunt nostrum
-              </p>
-            </div>
+        <div class="cmt-cont">
+          <div class="comments-image">
+            <img src="images/pic1.jpg" class="comm-1" alt="" />
+            <img src="images/pic1.jpg" class="comm-2" alt="" />
+            <img src="images/pic1.jpg" class="comm-3" alt="" />
           </div>
-          <div class="imgBlock">
-            <img src="images/herobg.jpg" alt="" />
-            <div class="info">
-              <h1>FAMILY PORTRAITS</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Debitis accusamus possimus ad ipsa saepe incidunt nostrum
-              </p>
-            </div>
-          </div>
-          <div class="imgBlock">
-            <img src="images/herobg.jpg" alt="" />
-            <div class="info">
-              <h1>FAMILY PORTRAITS</h1>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Debitis accusamus possimus ad ipsa saepe incidunt nostrum
-              </p>
+
+          <div class="quote-cont">
+            <p class="quote">
+              <i class="fa-solid fa-quote-left"></i>
+              Kayla was by far the best investment we made for our wedding. We
+              can forever relive our very favorite day through her photography.
+              <i class="fa-solid fa-quote-right"></i>
+            </p>
+
+            <div class="client-info">
+              <div class="client">
+                <div class="comm-cont">
+                  <img src="/images/pic1.jpg" alt="" />
+                </div>
+                <div class="">
+                  <h3>comments from</h3>
+                  <p>Emily & Mathew</p>
+                  <p>Past Clients <i class="fas fa-check"></i></p>
+                </div>
+              </div>
+
+              <div class="client-arrows">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 40.89 18.53"
+                  class="left-icon"
+                >
+                  <path
+                    d="M40.95 9.62v-.75H4.15c2.8-1.09 5.12-3.39 6.89-6.84l.06-.11-.65-.33-.06.11C7.93 6.47 4.46 8.9.06 8.9h-.12v.74h.12c4.42 0 7.89 2.41 10.32 7.16l.06.11.65-.33-.06-.11c-1.76-3.45-4.08-5.75-6.89-6.84h36.81Z"
+                  ></path>
+                </svg>
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 40.89 18.53"
+                  class="right-icon"
+                >
+                  <path
+                    d="M40.95 9.62v-.75H4.15c2.8-1.09 5.12-3.39 6.89-6.84l.06-.11-.65-.33-.06.11C7.93 6.47 4.46 8.9.06 8.9h-.12v.74h.12c4.42 0 7.89 2.41 10.32 7.16l.06.11.65-.33-.06-.11c-1.76-3.45-4.08-5.75-6.89-6.84h36.81Z"
+                  ></path>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section id="gallery">
-        <div class="">
-          <h1 class="sub-heading">GALLERY</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi
-            reiciendis sint, sequi totam nobis similique adipisci accusantium
-          </p>
-
-          <button>see more <i class="fas fa-arrow-right"></i></button>
-        </div>
-
-        <div class="gallery-cont">
-          <img src="/images/pic1.jpg" alt="" />
-          <img src="/images/pic2.jpg" alt="" />
-          <img src="/images/pic3.jpg" alt="" />
-          <img src="/images/pic4.jpg" alt="" />
-          <img src="/images/pic5.jpg" alt="" />
-          <img src="/images/herobg.jpg" alt="" />
+        <div class="gal-cont">
+          <h1>View Gallery Collections</h1>
+          <img src="/images/wed.jpg" class="gal-1" alt="" />
+          <img src="/images/wed.jpg" class="gal-2" alt="" />
+          <img src="/images/wed.jpg" class="gal-3" alt="" />
         </div>
       </section>
 
-      <section id="pricing">
-        <div class="">
-          <h1 class="sub-heading">PRICE PLANS</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus
-            mollitia repellat repellendus. Obcaecati delectus
-          </p>
+      <section id="work">
+        <marquee behavior="" direction=""
+          >Romance isn't Dead - Lets Make Magic ✨</marquee
+        >
+        <div class="img-cont">
+          <img src="/images/wed.jpg" alt="" />
         </div>
 
-        <div class="price-list">
-          <div class="price-block">
-            <h1>GHC 700</h1>
-            <p>Family Portraits</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-            <div class="price-info">
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-            </div>
-
-            <button>GET IN TOUCH</button>
-          </div>
-          <div class="price-block">
-            <h1>GHC 700</h1>
-            <p>Family Portraits</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-            <div class="price-info">
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-            </div>
-
-            <button>GET IN TOUCH</button>
-          </div>
-          <div class="price-block">
-            <h1>GHC 700</h1>
-            <p>Family Portraits</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-
-            <div class="price-info">
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-              <div class="">
-                <i class="fa-solid fa-circle-check"></i>
-                <p>Full daily coverage</p>
-              </div>
-            </div>
-
-            <button>GET IN TOUCH</button>
-          </div>
+        <div class="work-info">
+          <img src="/images/KWAMS WEDDINGS 2.png" alt="" />
+          <h1>let's make magic</h1>
+          <p>
+            I'd love to work with you. In order to create from a place of
+            inspiration, a limited number of projects are accepted each year.
+            Inquire for collections and to reserve your date.
+          </p>
+          <button>Lets Do this</button>
         </div>
       </section>
 
-      <section id="msg">
-        <div class="msg-card">
-          <p># Leave us a message!</p>
-        </div>
+      <section id="ceo">
+        <h1 class="headline">Meet the Visionary Behind Kwamz Images</h1>
 
-        <form action="">
-          <div class="form-group">
-            <label for="username">Name:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="enter your name"
-              required
-            />
+        <div class="ceo-cont">
+          <div class="ceo-image">
+            <img src="/images/pic4.jpg" class="ceo-1" alt="" />
+            <img src="/images/pic4.jpg" class="ceo-2" alt="" />
           </div>
-          <div class="form-group">
-            <label for="message">Message:</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="write here..."
-              required
-            ></textarea>
+
+          <div class="ceo-content">
+            <h2>Hi ✋, I'm Kwamz</h2>
+            <p>
+              Photography isn’t just my profession—it’s my passion. From a young
+              age, I was drawn to the magic of capturing emotions through a
+              lens. What started as a hobby quickly turned into a mission: to
+              bring people’s stories to life through timeless photography. At
+              Kwamz Images, I strive to create a unique experience for every
+              client, ensuring that each photoshoot is comfortable, creative,
+              and full of life. My goal is not just to take pictures but to tell
+              stories—your stories—through powerful visuals that last forever.
+            </p>
           </div>
-          <button type="submit">
-            Send Message <i class="fa-solid fa-truck-fast"></i>
-          </button>
-        </form>
+        </div>
       </section>
     </main>
 
     <footer>
-      <div class="logo">KR8TOS STUDIOS</div>
+      <div class="logo">
+        <img src="/images/logo.png" alt="" />
+      </div>
 
-      <ul>
-        <li><a href="">/about</a></li>
-        <li><a href="">/pricing</a></li>
-        <li><a href="">/services</a></li>
-        <li><a href="">/contact</a></li>
-      </ul>
+      <div class="">
+        <h1>Contact Us</h1>
 
-      <div class="socials">
         <ul>
-          <li>
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fas fa-envelope"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-instagram"></i></a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-tiktok"></i></a>
-          </li>
+          <li>📍 Location: North-Kaneshi, Accra</li>
+          <li>📞 Phone: +123 456 7890</li>
+          <li>📧 Email: <a href="#">contact@kwamzimages.com</a></li>
+          <li>🌍 Website: <a href="#">www.kwamzimages.com</a></li>
         </ul>
       </div>
-    </footer>
 
-    <script src="app.js"></script>
+      <div class="">
+        <h1>🔗 Quick Links</h1>
+
+        <div class="">
+          ✔️ <span> Home |</span>
+          <span> About |</span>
+          <span> Portfolio |</span>
+          <span> Blog |</span>
+          <span> Pricing |</span>
+          <span> Contact |</span>
+        </div>
+      </div>
+
+      <div class="">
+        <h1>📲 Follow Us on Social Media:</h1>
+
+        <div class="">
+          🔹 <span> Facebook</span>
+          <span>| Instagram</span>
+          <span>| Twitter</span>
+          <span>| LinkedIn</span>
+        </div>
+      </div>
+
+      <p>
+        📸 Kwamz Images – Capturing Life’s Best Moments, One Click at a Time
+      </p>
+
+      <p>© 2025 Kwamz Images. All Rights Reserved.</p>
+    </footer>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
 </html>
