@@ -26,10 +26,10 @@ window.addEventListener("DOMContentLoaded", () => {
     tlIntro.fromTo(".hero-info button", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1},'<50%')
     tlIntro.to('.hero', {scrollTrigger: {
         trigger: '.hero',
-        start: "0",
+        start: "20%",
         pin: true,
         pinSpacing: false,
-        end: "100%",
+        end: "80%",
         scrub: 1
     }})
 
@@ -37,26 +37,44 @@ window.addEventListener("DOMContentLoaded", () => {
     const tlcomment = gsap.timeline({
         scrollTrigger: {
             trigger: ".cmt",
-            start: "0%",
+            start: "-100px",
             pin: true,
             pinSpacing: false,
             end: "100%",
             scrub: 1,
         }
     })
+
+
+    tlcomment.to(".cmt h1, .cmt p", {opacity: 0, duration: 1.5})
 
     const tlGallery = gsap.timeline({
         scrollTrigger: {
-            trigger: ".gal-1",
+            trigger: "#gallery",
             start: "-30%",
+            end: "90%",
             pin: true,
             pinSpacing: false,
-            end: "100%",
             scrub: 1,
         }
     })
 
-    tlGallery.to(".gal-1", {x: "-100%"})
-    tlGallery.to(".gal-2", {x: "100%"}, "<")
-    tlGallery.to(".gal-3", {x: "-100%"}, "<")
+    tlGallery.from('.gal-cont h1', {yPercent: -500,fontSize: "3rem"})
+    tlGallery.to(".gal-1", {x: "-100%", opacity: 0}, "<")
+    tlGallery.to(".gal-2", {x: "100%", opacity: 0}, "<")
+    tlGallery.to(".gal-3", {x: "-100%", opacity: 0}, "<")
+    tlGallery.to('.gal-cont h1', {opacity: 0})
+
+    const tlCeo = gsap.timeline({
+        scrollTrigger: {
+            trigger: "#ceo",
+            start: "-30%",
+            end: "20%",
+            scrub: 2,
+        }
+    })
+    
+    tlCeo.from(".ceo-1", {x: "-100%"})
+    tlCeo.from(".ceo-2", {x: "100%"},'<')
 })
+
