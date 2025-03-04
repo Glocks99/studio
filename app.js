@@ -16,14 +16,7 @@ window.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger)
     
 
-    const tlIntro = gsap.timeline({defaults: {ease: "power3.out", duration: .75}})
-
-    tlIntro.fromTo(".logo", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1, delay: .5
-    })
-    tlIntro.fromTo(".hero-info img", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1}, '<50%')
-    tlIntro.fromTo(".hero-info h1", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1},'<50%')
-    tlIntro.fromTo(".hero-info p", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1})
-    tlIntro.fromTo(".hero-info button", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1},'<50%')
+    const tlIntro = gsap.timeline({defaults: {ease: "power3.inOut", duration: 1.5}})
     tlIntro.to('.hero', {scrollTrigger: {
         trigger: '.hero',
         start: "20%",
@@ -32,6 +25,14 @@ window.addEventListener("DOMContentLoaded", () => {
         end: "80%",
         scrub: 1
     }})
+
+    tlIntro.fromTo(".hero-info img", {y: '100%', opacity: 0}, {y: 0, opacity:1})
+    tlIntro.fromTo(".hero-info h1", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    tlIntro.fromTo(".hero-info p", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    tlIntro.fromTo(".hero-info button", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    tlIntro.fromTo(".logo", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1, delay: .5
+    },'<50%')
+    
 
 
     const tlcomment = gsap.timeline({
@@ -59,11 +60,11 @@ window.addEventListener("DOMContentLoaded", () => {
         }
     })
 
-    tlGallery.from('.gal-cont h1', {yPercent: -500,fontSize: "3rem"})
+    // tlGallery.from('.gal-cont h1', {yPercent: -500,fontSize: "3rem"})
     tlGallery.to(".gal-1", {x: "-100%", opacity: 0}, "<")
     tlGallery.to(".gal-2", {x: "100%", opacity: 0}, "<")
+    tlGallery.to('.gal-cont h1', {opacity: 0},'<')
     tlGallery.to(".gal-3", {x: "-100%", opacity: 0}, "<")
-    tlGallery.to('.gal-cont h1', {opacity: 0})
 
     const tlCeo = gsap.timeline({
         scrollTrigger: {
