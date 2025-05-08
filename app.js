@@ -16,38 +16,38 @@ window.addEventListener("DOMContentLoaded", () => {
     gsap.registerPlugin(ScrollTrigger)
     
 
-    const tlIntro = gsap.timeline({defaults: {ease: "power3.inOut", duration: 1.5}})
-    tlIntro.to('.hero', {scrollTrigger: {
-        trigger: '.hero',
-        start: "20%",
-        pin: true,
-        pinSpacing: false,
-        end: "80%",
-        scrub: 1
-    }})
+    // const tlIntro = gsap.timeline({defaults: {ease: "power3.inOut", duration: 1.5}})
+    // tlIntro.to('.hero', {scrollTrigger: {
+    //     trigger: '.hero',
+    //     start: "20%",
+    //     pin: true,
+    //     pinSpacing: false,
+    //     end: "80%",
+    //     scrub: 1
+    // }})
 
-    tlIntro.fromTo(".hero-info img", {y: '100%', opacity: 0}, {y: 0, opacity:1})
-    tlIntro.fromTo(".hero-info h1", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
-    tlIntro.fromTo(".hero-info p", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
-    tlIntro.fromTo(".hero-info button", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
-    tlIntro.fromTo(".logo", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1, delay: .5
-    },'<50%')
+    // tlIntro.fromTo(".hero-info img", {y: '100%', opacity: 0}, {y: 0, opacity:1})
+    // tlIntro.fromTo(".hero-info h1", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    // tlIntro.fromTo(".hero-info p", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    // tlIntro.fromTo(".hero-info button", {y: '100%', opacity: 0}, {y: 0, opacity:1},'<50%')
+    // tlIntro.fromTo(".logo", {y: '100%', opacity: 0}, {y: 0, opacity:1, duration: 1, delay: .5
+    // },'<50%')
     
 
 
-    const tlcomment = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".cmt",
-            start: "-100px",
-            pin: true,
-            pinSpacing: false,
-            end: "100%",
-            scrub: 1,
-        }
-    })
+    // const tlcomment = gsap.timeline({
+    //     scrollTrigger: {
+    //         trigger: ".cmt",
+    //         start: "0 0",
+    //         pin: true,
+    //         pinSpacing: false,
+    //         end: "100%",
+    //         scrub: 1,
+    //     }
+    // })
 
 
-    tlcomment.to(".cmt h1, .cmt p", {opacity: 0, duration: 1.5})
+    // tlcomment.to(".cmt h1, .cmt p", {opacity: 0, duration: 1.5})
 
     const tlGallery = gsap.timeline({
         scrollTrigger: {

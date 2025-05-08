@@ -12,8 +12,6 @@ html {
     scroll-behavior: smooth;
 }
 
-
-
 img {
     width: 100%;
     height: 100%;
@@ -31,7 +29,7 @@ img {
 }
 
 header {
-    display: flex;
+    display: none;
     height: 10vh;
     position: fixed;
     z-index: 11;
@@ -55,25 +53,27 @@ header {
 .menu {
     position: absolute;
     right: 16px;
-    /* background-color: red; */
 }
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    background-color: #fff;
-}
-
 
 #hero {
+    margin-bottom: 200px;
+}
+
+.hero-cont {
     height: 100vh;
-    position: relative;
-    padding-top: 50px;
+    position: relative; 
     overflow: hidden;
 }
 
-#hero::before {
+.filler {
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient( to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.5) 40%,transparent 100%);
+    left: 0;
+    bottom: -50px;
+}
+.hero-cont::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -81,7 +81,7 @@ main {
     background-color: rgba(0,0,0,0.8);
 }
 
-#hero .img-container {
+.hero-cont .img-container {
     height: 100%;
     width: 100%;
 }
@@ -122,14 +122,59 @@ main {
 }
 #abt {
     background-color: #fff;
-    z-index: 10;
+    margin-bottom: 200px;
+}
+.abt-content {
+    padding: 0 40px;
 }
 .abt-info {
     padding: 0 16px;
 }
 
+.abt-info p:nth-child(1) span {
+    background: linear-gradient(165deg, red, green);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.abt-info p:nth-child(2){
+    color: red;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.abt-image {
+    position: relative;
+}
+
+.abt-image img {
+    border-radius: 20px;
+}
+
+.abt-image::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    z-index:  -1;
+    transform: rotate(10deg);
+    background-color: green;
+}
+
 #prices, #ceo {
     padding: 16px;
+}
+
+.msg-cont {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 100px;
+    font-size: 20px;
 }
 
 .msg {
@@ -166,6 +211,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 50px;
+    margin-bottom: 200px;
 }
 
 .pricing img {
@@ -175,12 +221,21 @@ main {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    font-size: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 .packages {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.package-cont {
+    aspect-ratio: 1/1;
 }
 
 .packages div {
@@ -193,14 +248,46 @@ main {
     text-align: center;
 }
 
+#ceo {
+    margin-bottom: 200px;
+}
+
+#ceo h1 {
+    margin-bottom: 100px;
+}
+
+#ceo h1 span {
+    background: linear-gradient(165deg, red, green);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+
 .ceo-cont {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.ceo-content h2, .ceo-content p {
+.ceo-content h2{
     text-align: center;
+    margin-bottom: 50px;
+}
+
+.ceo-content h2 span{
+    background: linear-gradient(165deg, red, green);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.ceo-content p {
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .ceo-image {
@@ -227,16 +314,19 @@ main {
 }
 
 #comments {
-    padding: 16px;
+    padding: 40px;
+    margin-bottom: 200px;
 }
 
 .cmt p{
     text-align: center;
+    font-size: 20px;
+    margin-bottom: 100px;
 }
 
 .comments-image {
     position: relative;
-    height: 500px;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -255,7 +345,7 @@ main {
 
 .quote-cont {
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     gap: 50px;
 }
 
@@ -270,33 +360,38 @@ main {
     width: calc(100% - 55%);
     top: 40px;
     left: 0;
+    border-radius: 20px;
 }
 
 .comm-2 {
     height: calc(100% - 50%);
-    width: calc(100% - 55%);
+    width: calc(100% - 50%);
     z-index: 2;
     top: 20px;
     right: 0;
+    border-radius: 20px;
 }
 
 .comm-3 {
     height: calc(100% - 50%);
-    width: calc(100% - 40%);
+    width: calc(100% - 50%);
     z-index: 1;
     bottom: 0;
+    border-radius: 20px;
+    aspect-ratio: 1/1;
 }
 
 .client {
     display: flex;
     align-items: center;
     gap: 20px;
+    width: 50%;
 }
 
 .quote {
     background-color: #bebebe;
+    border-radius: 20px;
     font-size: 1.5rem;
-    text-decoration: underline;
     text-align: center;
     font-style: italic;
     padding: 20px;
@@ -304,16 +399,21 @@ main {
 
 
 .comm-cont {
-    width: 100px;
+    min-width: 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
+}
+
+.client-rep {
+    text-align: center;
 }
 
 .client-arrows {
     display: flex;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .left-icon, .right-icon {
@@ -361,17 +461,10 @@ main {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    padding: 0 40px;
+    margin-bottom: 200px;
 }
 
-#work marquee {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    color: #fff;
-    font-size: 30px;
-}
 
 #work .img-cont {
     background: no-repeat center/cover url("/images/leaf.jpg");
@@ -395,6 +488,10 @@ main {
     object-fit: contain;
 }
 
+#work p {
+    font-size: 20px;
+}
+
 #work button {
     border: 1px solid rgba(0,0,0,0.1);
     padding: 10px 40px;
@@ -402,12 +499,149 @@ main {
     background-color: transparent;
 }
 
+#in-touch {
+    display: flex;
+    gap: 30px;
+    padding: 0 40px;
+    margin-bottom: 200px;
+}
+
+.send-msg {
+    flex: 1;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.send-msg > div h1 {
+    background: linear-gradient(165deg, red, green);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.send-msg input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding-left: 10px;
+}
+
+.send-msg textarea {
+    height: 200px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.send-msg button {
+    height: 40px;
+    width: 300px;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    color: #fff;
+    background: linear-gradient(270deg, green, rgb(165, 252, 165));
+}
+
+.contact-now {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid rgba(0,0,0,0.1);
+    /* background: linear-gradient(to bottom right, blue, white 100%); */
+}
+
+.c-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.c-info {
+    display: flex;
+    gap: 10px;
+}
+
 footer {
-    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-around;
+    padding: 0 40px;
+    min-height: 100vh;
+    font-size: 20px;
+    color: #fff;
+    background: linear-gradient(to bottom right, black, rgba(0,0,0,0.3));
+}
+
+footer > div:nth-child(1){
+    padding-top: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    place-items: center;
+}
+
+footer > p {
+    text-align: center;
+}
+
+#progress1 {
+    display: flex;
+    gap: 20px;
+    padding: 0 40px;
+    width: 100%;
+    margin-bottom: 200px;
+    font-size: 20px;
+}
+.proBlock1{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.proBlock1 h1 {
+    background: linear-gradient(165deg, red, green);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 50px;
+}
+.gallery{
+    flex: 1;
+}
+.progressBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.progressBlock > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.progressBlock > div .progressbar1{
+    background-color: hsl(0, 2%, 92%);
+    border-radius: 20px;
+    height: 20px;
+    width: 50%;
+}
+.subProgress {
+    height: 100%;
+    background-color: green;
+    border-radius: 20px;
 }
 
 @media(min-width: 768px) {
@@ -480,4 +714,73 @@ footer {
         padding: 0 40px;
     }
     
+}
+
+@media(max-width: 765px){
+    #in-touch {
+        flex-direction: column;
+        padding: 0 16px;
+    }
+
+    .contact-now{
+        width: 100%;
+    }
+
+    #work {
+        padding: 0 16px;
+    }
+
+    #work .img-cont img {
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+    }
+
+    #work .work-info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .quote-cont {
+        flex-direction: column;
+    }
+
+    #comments {
+        padding: 0 16px;
+    }
+    
+    .comm-1 {
+        height: calc(100% - 50%);
+        width: calc(100% - 35%);
+    }
+    .comm-2 {
+        height: calc(100% - 50%);
+        width: calc(100% - 35%);
+    }
+    .comm-3 {
+        height: calc(100% - 50%);
+        width: calc(100% - 15%);
+    }
+
+    .client {
+        width: 100%;
+    }
+
+    .msg-cont {
+        flex-direction: column;
+    }
+
+    #progress1 {
+        padding: 0 16px;
+        flex-direction: column;
+    }
+
+    .abt-content {
+        padding: 0 16px;
+    }
+
+    .headline {
+        margin-top: 50px;
+    }
 }
